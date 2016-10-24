@@ -1,0 +1,39 @@
+<h1>{{info}}</h1>
+<p>&nbsp;</p>
+
+<tabs>
+    <tab title="Flight">
+        <div *ngIf="message" style="color: red">
+            {{message}}
+        </div>
+
+        <div class="form-group">
+            <label>Id</label>
+            <input class="form-control" [(ngModel)]="flight.id">
+        </div>
+
+        <div class="form-group">
+            <label>From</label>
+            <input class="form-control" [(ngModel)]="flight.from">
+        </div>
+
+        <div class="form-group">
+            <label>To</label>
+            <input class="form-control" [(ngModel)]="flight.to">
+        </div>
+
+        <div class="form-group">
+            <label>Date</label>
+            <input class="form-control" [(ngModel)]="flight.date">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" (click)="save()">Save!</button>
+        </div>
+    </tab>
+
+    <tab title="Details">
+        <pre>{{ flight | json }}</pre>
+    </tab>
+
+</tabs>
